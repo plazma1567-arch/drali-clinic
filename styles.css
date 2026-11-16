@@ -180,3 +180,41 @@ textarea { resize: vertical; }
   .cta .btn { flex: 1 1 100%; }
   .stats { gap: 18px; }
 }
+
+/* ---------- Doctors & photos ---------- */
+[hidden] { display: none !important; }
+.photo { position: relative; border-radius: 50%; overflow: hidden; aspect-ratio: 1; background: linear-gradient(135deg, var(--brand), #14b8a6) center / cover; }
+/* silhouette shown until a real photo is added (or if it fails to load) */
+.photo::before { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='46' r='22' fill='%23e6fffa'/%3E%3Cpath d='M18 120c4-26 20-38 42-38s38 12 42 38z' fill='%23e6fffa'/%3E%3C/svg%3E") center / cover no-repeat; }
+.photo img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
+.duo { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; }
+.doc-mini { margin: 0; text-align: center; }
+.doc-mini .photo { width: 110px; border: 4px solid #fff; box-shadow: 0 8px 20px -8px rgba(15, 118, 110, .5); }
+.doc-mini figcaption { margin-top: 8px; font-weight: 600; font-size: .95rem; color: var(--brand-dark); }
+
+.docs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+.doc { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.doc .photo { width: 150px; }
+.doc h3 { font-size: 1.3rem; margin-bottom: .2em; }
+.doc .role { color: var(--brand); font-weight: 600; margin-bottom: .6em; }
+.doc p:not(.role) { color: var(--muted); }
+
+/* ---------- Booking confirmation ---------- */
+.booked { background: var(--card); border-radius: 20px; padding: clamp(24px, 4vw, 40px); box-shadow: var(--shadow); border: 1px solid var(--line); text-align: center; display: grid; gap: 14px; justify-items: center; outline: none; }
+.booked-ico { width: 64px; height: 64px; border-radius: 50%; background: var(--wa-dark); color: #fff; display: grid; place-items: center; font-size: 2rem; font-weight: 700; }
+.booked-msg { font-size: 1.3rem; font-weight: 700; color: var(--brand-dark); margin: 0; }
+.booked-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.btn-ghost { background: transparent; color: var(--brand); border: 1px solid var(--brand); }
+.btn-ghost:hover { background: var(--brand-soft); }
+
+@media (max-width: 960px) {
+  .docs { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .brand-name { white-space: normal; font-size: .85rem; line-height: 1.25; }
+  .doc { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .doc .photo { width: 140px; }
+  .duo { gap: 16px; }
+  .doc-mini .photo { width: 96px; }
+}

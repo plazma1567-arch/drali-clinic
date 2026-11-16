@@ -2,11 +2,11 @@
    CLINIC SETTINGS — edit these values, nothing else needs to change
    ============================================================ */
 const CLINIC = {
-  // WhatsApp number in international format, digits only (92 = Pakistan, no leading 0)
-  whatsapp: "923000000000",            // <-- REPLACE with the doctor's real WhatsApp number
-  phoneDisplay: "+92 300 0000000",     // <-- shown on the page
-  address: "Main Road, Lanjar, Sindh, Pakistan",
-  mapQuery: "Lanjar, Sindh, Pakistan", // used for the embedded Google map
+  // Doctor's WhatsApp number in international format, digits only (no + or 00)
+  whatsapp: "971585569878",
+  phoneDisplay: "+971 58 556 9878",    // shown on the page
+  address: "Karachi, Pakistan",
+  mapQuery: "Karachi, Pakistan",       // used for the embedded Google map
   // Opening hours: 0 = Sunday ... 6 = Saturday. Set a day to null if the clinic is closed.
   hours: {
     0: null,
@@ -28,20 +28,28 @@ const I18N = {
   en: {
     "nav.about": "About", "nav.services": "Services", "nav.online": "Online Consultation",
     "nav.book": "Book Appointment", "nav.contact": "Contact",
-    "hero.tag": "Trusted family care in Lanjar",
-    "hero.title": "Dr. Ali Abd Shabana",
+    "nav.doctors": "Our Doctors",
+    "hero.tag": "Trusted family care in Karachi",
+    "hero.title": "Dr. Ali and Shabana Health Services Co.",
     "hero.sub": "Book a clinic visit or consult the doctor online through WhatsApp — from home, without waiting in line.",
     "hero.book": "Book Appointment", "hero.chat": "Consult on WhatsApp",
     "hero.b1": "Assalam-o-Alaikum Doctor Sahib, I have had a fever since yesterday.",
     "hero.b2": "Wa Alaikum Assalam. Please share your temperature and any other symptoms. ✔✔",
-    "hero.s1": "Online consultations", "hero.s2": "Reply on WhatsApp", "hero.s3": "Clinic in Lanjar",
-    "about.kicker": "About the doctor",
+    "hero.s1": "Online consultations", "hero.s2": "Reply on WhatsApp", "hero.s3": "Clinic in Karachi", "hero.s3v": "Karachi",
+    "about.kicker": "About us",
     "about.title": "Care that listens first",
-    "about.p1": "Dr. Ali Abd Shabana serves patients in Lanjar and nearby villages, treating children and adults for everyday illnesses as well as long-term conditions.",
+    "about.p1": "Dr. Ali and Dr. Shabana serve patients across Karachi, treating children and adults for everyday illnesses as well as long-term conditions. Female patients can choose to see Dr. Shabana.",
     "about.p2": "Patients who cannot travel can now send their symptoms, reports and photos on WhatsApp and get advice, prescriptions and follow-ups without leaving home.",
     "about.l1": "Clear explanation in Urdu, Sindhi or English",
     "about.l2": "Prescriptions shared directly on WhatsApp",
     "about.l3": "Follow-up reminders after every visit",
+    "doc.kicker": "Our doctors", "doc.title": "Meet the doctors",
+    "doc.ali": "Dr. Ali", "doc.shabana": "Dr. Shabana",
+    "doc.aliRole": "Physician",
+    "doc.aliBio": "Consultations for adults and children, at the clinic or online through WhatsApp.",
+    "doc.shabanaRole": "Lady doctor",
+    "doc.shabanaBio": "Consultations for women, children and families, handled with privacy, at the clinic or online through WhatsApp.",
+    "doc.bookAli": "Book with Dr. Ali", "doc.bookShabana": "Book with Dr. Shabana",
     "srv.kicker": "Services", "srv.title": "What we treat",
     "srv.1t": "General Medicine", "srv.1d": "Fever, flu, infections, stomach and chest problems.",
     "srv.2t": "Diabetes & Blood Pressure", "srv.2d": "Regular check-ups, medicine adjustment and diet advice.",
@@ -56,7 +64,8 @@ const I18N = {
     "fee.title": "Consultation fees", "fee.clinic": "Clinic visit", "fee.video": "WhatsApp video call", "fee.chat": "WhatsApp chat",
     "book.kicker": "Appointment", "book.title": "Book your appointment",
     "book.sub": "Your request is sent to the clinic on WhatsApp. You will get a confirmation reply.",
-    "f.name": "Patient full name", "f.phone": "Your phone number", "f.age": "Age", "f.gender": "Gender",
+    "f.doctor": "Doctor", "f.d.any": "Any available doctor",
+    "f.name": "Patient full name", "f.phone": "Your WhatsApp number (with country code)", "f.age": "Age", "f.gender": "Gender",
     "f.male": "Male", "f.female": "Female", "f.other": "Other",
     "f.type": "Consultation type", "f.t.clinic": "Clinic visit", "f.t.video": "WhatsApp video call", "f.t.chat": "WhatsApp chat",
     "f.date": "Preferred date", "f.time": "Preferred time", "f.pick": "Select a date first",
@@ -65,6 +74,10 @@ const I18N = {
     "f.newpt": "First visit to this doctor", "f.submit": "Send booking on WhatsApp",
     "f.note": "WhatsApp will open with your details filled in. Press send to complete the booking.",
     "f.err": "Please fill in all required fields.",
+    "ok.booked": "Your appointment is booked for {date} at {time}.",
+    "ok.sub": "Your booking details have been opened in WhatsApp. Press send so the clinic receives them.",
+    "ok.resend": "Open WhatsApp again", "ok.new": "Book another",
+    "msg.doctor": "Doctor", "msg.reply": "Tap to send the confirmation to the patient",
     "hrs.title": "Clinic timings", "hrs.closed": "Closed",
     "ct.kicker": "Contact", "ct.title": "Visit the clinic",
     "ct.addr": "Address", "ct.phone": "Phone / WhatsApp", "ct.chat": "Chat on WhatsApp",
@@ -80,20 +93,28 @@ const I18N = {
   ur: {
     "nav.about": "تعارف", "nav.services": "خدمات", "nav.online": "آن لائن مشورہ",
     "nav.book": "اپائنٹمنٹ بک کریں", "nav.contact": "رابطہ",
-    "hero.tag": "لانجار میں قابلِ اعتماد علاج",
-    "hero.title": "ڈاکٹر علی عبد شبانہ",
+    "nav.doctors": "ہمارے ڈاکٹر",
+    "hero.tag": "کراچی میں قابلِ اعتماد علاج",
+    "hero.title": "ڈاکٹر علی اینڈ شبانہ ہیلتھ سروسز کمپنی",
     "hero.sub": "کلینک کی اپائنٹمنٹ بک کریں یا گھر بیٹھے واٹس ایپ پر ڈاکٹر سے مشورہ کریں — بغیر قطار میں انتظار کے۔",
     "hero.book": "اپائنٹمنٹ بک کریں", "hero.chat": "واٹس ایپ پر مشورہ",
     "hero.b1": "السلام علیکم ڈاکٹر صاحب، مجھے کل سے بخار ہے۔",
     "hero.b2": "وعلیکم السلام۔ براہِ کرم اپنا درجہ حرارت اور دیگر علامات بتائیں۔ ✔✔",
-    "hero.s1": "آن لائن مشورہ", "hero.s2": "واٹس ایپ پر جواب", "hero.s3": "لانجار میں کلینک",
-    "about.kicker": "ڈاکٹر کا تعارف",
+    "hero.s1": "آن لائن مشورہ", "hero.s2": "واٹس ایپ پر جواب", "hero.s3": "کراچی میں کلینک", "hero.s3v": "کراچی",
+    "about.kicker": "ہمارا تعارف",
     "about.title": "پہلے سنیں، پھر علاج",
-    "about.p1": "ڈاکٹر علی عبد شبانہ لانجار اور قریبی دیہات کے مریضوں کا علاج کرتے ہیں — بچوں اور بڑوں کی عام بیماریوں سے لے کر طویل مدتی امراض تک۔",
+    "about.p1": "ڈاکٹر علی اور ڈاکٹر شبانہ کراچی بھر کے مریضوں کا علاج کرتے ہیں — بچوں اور بڑوں کی عام بیماریوں سے لے کر طویل مدتی امراض تک۔ خواتین مریض ڈاکٹر شبانہ سے مشورہ کر سکتی ہیں۔",
     "about.p2": "جو مریض سفر نہیں کر سکتے وہ اپنی علامات، رپورٹس اور تصاویر واٹس ایپ پر بھیج کر گھر بیٹھے مشورہ، نسخہ اور فالو اپ حاصل کر سکتے ہیں۔",
     "about.l1": "اردو، سندھی یا انگریزی میں واضح رہنمائی",
     "about.l2": "نسخہ براہِ راست واٹس ایپ پر",
     "about.l3": "ہر وزٹ کے بعد فالو اپ یاد دہانی",
+    "doc.kicker": "ہمارے ڈاکٹر", "doc.title": "ڈاکٹرز سے ملیں",
+    "doc.ali": "ڈاکٹر علی", "doc.shabana": "ڈاکٹر شبانہ",
+    "doc.aliRole": "فزیشن",
+    "doc.aliBio": "بڑوں اور بچوں کے لیے مشورہ — کلینک میں یا واٹس ایپ پر آن لائن۔",
+    "doc.shabanaRole": "لیڈی ڈاکٹر",
+    "doc.shabanaBio": "خواتین، بچوں اور خاندانوں کے لیے رازداری کے ساتھ مشورہ — کلینک میں یا واٹس ایپ پر آن لائن۔",
+    "doc.bookAli": "ڈاکٹر علی سے وقت لیں", "doc.bookShabana": "ڈاکٹر شبانہ سے وقت لیں",
     "srv.kicker": "خدمات", "srv.title": "ہم کن امراض کا علاج کرتے ہیں",
     "srv.1t": "جنرل میڈیسن", "srv.1d": "بخار، نزلہ زکام، انفیکشن، پیٹ اور سینے کے مسائل۔",
     "srv.2t": "شوگر اور بلڈ پریشر", "srv.2d": "باقاعدہ چیک اپ، دوا میں تبدیلی اور غذا کا مشورہ۔",
@@ -108,7 +129,8 @@ const I18N = {
     "fee.title": "فیس", "fee.clinic": "کلینک وزٹ", "fee.video": "واٹس ایپ ویڈیو کال", "fee.chat": "واٹس ایپ چیٹ",
     "book.kicker": "اپائنٹمنٹ", "book.title": "اپنی اپائنٹمنٹ بک کریں",
     "book.sub": "آپ کی درخواست واٹس ایپ پر کلینک کو بھیجی جائے گی۔ آپ کو تصدیقی جواب ملے گا۔",
-    "f.name": "مریض کا پورا نام", "f.phone": "آپ کا فون نمبر", "f.age": "عمر", "f.gender": "جنس",
+    "f.doctor": "ڈاکٹر", "f.d.any": "کوئی بھی دستیاب ڈاکٹر",
+    "f.name": "مریض کا پورا نام", "f.phone": "آپ کا واٹس ایپ نمبر (کنٹری کوڈ کے ساتھ)", "f.age": "عمر", "f.gender": "جنس",
     "f.male": "مرد", "f.female": "عورت", "f.other": "دیگر",
     "f.type": "مشورے کی قسم", "f.t.clinic": "کلینک وزٹ", "f.t.video": "واٹس ایپ ویڈیو کال", "f.t.chat": "واٹس ایپ چیٹ",
     "f.date": "تاریخ", "f.time": "وقت", "f.pick": "پہلے تاریخ منتخب کریں",
@@ -117,6 +139,10 @@ const I18N = {
     "f.newpt": "اس ڈاکٹر کے پاس پہلی بار", "f.submit": "واٹس ایپ پر بکنگ بھیجیں",
     "f.note": "واٹس ایپ آپ کی تفصیلات کے ساتھ کھلے گا۔ بکنگ مکمل کرنے کے لیے سینڈ دبائیں۔",
     "f.err": "براہِ کرم تمام ضروری خانے پُر کریں۔",
+    "ok.booked": "آپ کی اپائنٹمنٹ {date} کو {time} بجے کے لیے بک ہو گئی ہے۔",
+    "ok.sub": "آپ کی بکنگ کی تفصیلات واٹس ایپ میں کھل گئی ہیں۔ سینڈ دبائیں تاکہ کلینک کو موصول ہو جائیں۔",
+    "ok.resend": "واٹس ایپ دوبارہ کھولیں", "ok.new": "نئی بکنگ",
+    "msg.doctor": "ڈاکٹر", "msg.reply": "مریض کو تصدیق بھیجنے کے لیے ٹیپ کریں",
     "hrs.title": "کلینک کے اوقات", "hrs.closed": "بند",
     "ct.kicker": "رابطہ", "ct.title": "کلینک تشریف لائیں",
     "ct.addr": "پتہ", "ct.phone": "فون / واٹس ایپ", "ct.chat": "واٹس ایپ پر بات کریں",
@@ -138,8 +164,14 @@ const t = (k) => I18N[lang][k] ?? I18N.en[k] ?? k;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-function waLink(text) {
-  return `https://wa.me/${CLINIC.whatsapp}?text=${encodeURIComponent(text)}`;
+function waLink(text, number = CLINIC.whatsapp) {
+  return `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+}
+
+// Patients type full international numbers (+92 300..., 0092 300...); convert to wa.me format
+function intlNumber(raw) {
+  const d = raw.replace(/\D/g, "");
+  return d.startsWith("00") ? d.slice(2) : d;
 }
 
 /* ---------- Language ---------- */
@@ -148,6 +180,7 @@ function applyLang() {
   document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
   $$("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
   $$("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+  $$("[data-i18n-alt]").forEach(el => { el.alt = t(el.dataset.i18nAlt); });
   $("#langBtn").textContent = lang === "en" ? "اردو" : "English";
   renderHours();
   renderSlots();
@@ -231,6 +264,10 @@ function submitBooking(e) {
   const genderLabel = t(`f.${data.get("gender")}`);
   const dateObj = new Date(data.get("date") + "T00:00");
   const dateStr = `${t("days")[dateObj.getDay()]}, ${dateObj.toLocaleDateString("en-GB")}`;
+  const timeStr = fmt12(data.get("time"));
+  const doctorKey = data.get("doctor");
+  const doctorLabel = doctorKey === "any" ? t("f.d.any") : t(`doc.${doctorKey}`);
+  const confirmText = t("ok.booked").replace("{date}", dateStr).replace("{time}", timeStr);
   const lines = [
     t("msg.hello"),
     "",
@@ -238,14 +275,26 @@ function submitBooking(e) {
     `*${t("msg.phone")}:* ${data.get("phone").trim()}`,
     `*${t("msg.age")}:* ${data.get("age")}`,
     `*${t("msg.gender")}:* ${genderLabel}`,
+    `*${t("msg.doctor")}:* ${doctorLabel}`,
     `*${t("msg.type")}:* ${typeLabel}`,
     `*${t("msg.date")}:* ${dateStr}`,
-    `*${t("msg.time")}:* ${fmt12(data.get("time"))}`,
+    `*${t("msg.time")}:* ${timeStr}`,
     `*${t("msg.new")}:* ${data.get("newpt") ? t("msg.yes") : t("msg.no")}`
   ];
   const sym = (data.get("symptoms") || "").trim();
   if (sym) lines.push(`*${t("msg.symptoms")}:* ${sym}`);
-  window.open(waLink(lines.join("\n")), "_blank", "noopener");
+  // One-tap link for the doctor: opens the patient's chat with the confirmation typed in
+  lines.push("", `${t("msg.reply")}:`, waLink(confirmText, intlNumber(data.get("phone"))));
+
+  const link = waLink(lines.join("\n"));
+  window.open(link, "_blank", "noopener");
+
+  // Confirmation shown to the patient straight away
+  $("#bookedMsg").textContent = confirmText;
+  $("#bookedResend").href = link;
+  f.hidden = true;
+  $("#booked").hidden = false;
+  $("#booked").focus();
 }
 
 /* ---------- Init ---------- */
@@ -269,11 +318,22 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#date").addEventListener("change", renderSlots);
 
   $("#bookForm").addEventListener("submit", submitBooking);
+  $("#bookedNew").addEventListener("click", () => {
+    $("#bookForm").reset();
+    renderSlots();
+    $("#booked").hidden = true;
+    $("#bookForm").hidden = false;
+    $("#name").focus();
+  });
 
   // preset consultation type from buttons
   $$("[data-type]").forEach(b => b.addEventListener("click", () => {
     const r = $(`input[name=type][value=${b.dataset.type}]`);
     if (r) r.checked = true;
+  }));
+  // preset doctor from "Book with Dr. ..." buttons
+  $$("[data-doctor]").forEach(b => b.addEventListener("click", () => {
+    $("#doctor").value = b.dataset.doctor;
   }));
 
   $("#langBtn").addEventListener("click", () => {

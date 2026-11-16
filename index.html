@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dr. Ali Abd Shabana — Clinic, Lanjar</title>
-  <meta name="description" content="Book an appointment or consult Dr. Ali Abd Shabana online through WhatsApp. Clinic in Lanjar, Sindh.">
+  <title>Dr. Ali and Shabana Health Services Co. — Karachi</title>
+  <meta name="description" content="Book an appointment or consult Dr. Ali or Dr. Shabana online through WhatsApp. Dr. Ali and Shabana Health Services Co., Karachi, Pakistan.">
   <meta name="theme-color" content="#0f766e">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z' fill='white'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +18,11 @@
   <div class="wrap bar">
     <a href="#top" class="brand">
       <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 3h5v6.5H21v5h-6.5V21h-5v-6.5H3v-5h6.5z"/></svg></span>
-      <span class="brand-name" data-i18n="hero.title">Dr. Ali Abd Shabana</span>
+      <span class="brand-name" data-i18n="hero.title">Dr. Ali and Shabana Health Services Co.</span>
     </a>
     <nav id="nav" class="nav">
       <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#doctors" data-i18n="nav.doctors">Our Doctors</a>
       <a href="#services" data-i18n="nav.services">Services</a>
       <a href="#online" data-i18n="nav.online">Online Consultation</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -42,8 +43,8 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="tag" data-i18n="hero.tag">Trusted family care in Lanjar</p>
-        <h1 data-i18n="hero.title">Dr. Ali Abd Shabana</h1>
+        <p class="tag" data-i18n="hero.tag">Trusted family care in Karachi</p>
+        <h1 data-i18n="hero.title">Dr. Ali and Shabana Health Services Co.</h1>
         <p class="lead" data-i18n="hero.sub">Book a clinic visit or consult the doctor online through WhatsApp.</p>
         <div class="cta">
           <a href="#book" class="btn" data-type="clinic" data-i18n="hero.book">Book Appointment</a>
@@ -55,12 +56,19 @@
         <ul class="stats">
           <li><strong>Video + Chat</strong><span data-i18n="hero.s1">Online consultations</span></li>
           <li><strong>WhatsApp</strong><span data-i18n="hero.s2">Reply on WhatsApp</span></li>
-          <li><strong>Lanjar</strong><span data-i18n="hero.s3">Clinic in Lanjar</span></li>
+          <li><strong data-i18n="hero.s3v">Karachi</strong><span data-i18n="hero.s3">Clinic in Karachi</span></li>
         </ul>
       </div>
       <div class="hero-card" aria-hidden="true">
-        <div class="avatar">
-          <svg viewBox="0 0 120 120"><circle cx="60" cy="44" r="22"/><path d="M18 112c4-24 20-36 42-36s38 12 42 36z"/><path class="steth" d="M44 80v14a16 16 0 0 0 32 0V80" fill="none" stroke-width="4"/><circle class="steth-dot" cx="76" cy="80" r="5"/></svg>
+        <div class="duo">
+          <figure class="doc-mini">
+            <div class="photo"><img src="images/dr-ali.jpg" alt="" onerror="this.remove()"></div>
+            <figcaption data-i18n="doc.ali">Dr. Ali</figcaption>
+          </figure>
+          <figure class="doc-mini">
+            <div class="photo"><img src="images/dr-shabana.jpg" alt="" onerror="this.remove()"></div>
+            <figcaption data-i18n="doc.shabana">Dr. Shabana</figcaption>
+          </figure>
         </div>
         <div class="chat">
           <div class="bubble in" data-i18n="hero.b1"></div>
@@ -89,8 +97,36 @@
     </div>
   </section>
 
+  <!-- DOCTORS -->
+  <section id="doctors" class="section alt">
+    <div class="wrap">
+      <p class="kicker" data-i18n="doc.kicker">Our doctors</p>
+      <h2 data-i18n="doc.title">Meet the doctors</h2>
+      <div class="docs">
+        <article class="doc">
+          <div class="photo"><img src="images/dr-ali.jpg" alt="Dr. Ali" data-i18n-alt="doc.ali" onerror="this.remove()"></div>
+          <div>
+            <h3 data-i18n="doc.ali">Dr. Ali</h3>
+            <p class="role" data-i18n="doc.aliRole"></p>
+            <p data-i18n="doc.aliBio"></p>
+            <a href="#book" class="btn btn-sm" data-doctor="ali" data-i18n="doc.bookAli">Book with Dr. Ali</a>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="photo"><img src="images/dr-shabana.jpg" alt="Dr. Shabana" data-i18n-alt="doc.shabana" onerror="this.remove()"></div>
+          <div>
+            <h3 data-i18n="doc.shabana">Dr. Shabana</h3>
+            <p class="role" data-i18n="doc.shabanaRole"></p>
+            <p data-i18n="doc.shabanaBio"></p>
+            <a href="#book" class="btn btn-sm" data-doctor="shabana" data-i18n="doc.bookShabana">Book with Dr. Shabana</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
-  <section id="services" class="section alt">
+  <section id="services" class="section">
     <div class="wrap">
       <p class="kicker" data-i18n="srv.kicker">Services</p>
       <h2 data-i18n="srv.title">What we treat</h2>
@@ -106,7 +142,7 @@
   </section>
 
   <!-- ONLINE -->
-  <section id="online" class="section">
+  <section id="online" class="section alt">
     <div class="wrap">
       <p class="kicker" data-i18n="on.kicker">Online consultation</p>
       <h2 data-i18n="on.title">See the doctor from home in 3 steps</h2>
@@ -127,7 +163,7 @@
   </section>
 
   <!-- BOOKING -->
-  <section id="book" class="section alt">
+  <section id="book" class="section">
     <div class="wrap book-grid">
       <div class="book-intro">
         <p class="kicker" data-i18n="book.kicker">Appointment</p>
@@ -148,13 +184,21 @@
         </fieldset>
 
         <div class="field">
+          <label for="doctor" data-i18n="f.doctor">Doctor</label>
+          <select id="doctor" name="doctor" required>
+            <option value="any" data-i18n="f.d.any">Any available doctor</option>
+            <option value="ali" data-i18n="doc.ali">Dr. Ali</option>
+            <option value="shabana" data-i18n="doc.shabana">Dr. Shabana</option>
+          </select>
+        </div>
+        <div class="field">
           <label for="name" data-i18n="f.name">Patient full name</label>
           <input id="name" name="name" required autocomplete="name" maxlength="80">
         </div>
         <div class="row">
           <div class="field">
-            <label for="phone" data-i18n="f.phone">Your phone number</label>
-            <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx" pattern="[0-9+\s\-]{10,16}" dir="ltr">
+            <label for="phone" data-i18n="f.phone">Your WhatsApp number (with country code)</label>
+            <input id="phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="+92 300 1234567" pattern="(\+|00)[0-9\s\-]{8,20}" dir="ltr">
           </div>
           <div class="field small">
             <label for="age" data-i18n="f.age">Age</label>
@@ -192,11 +236,24 @@
         </button>
         <p class="note" data-i18n="f.note"></p>
       </form>
+
+      <div id="booked" class="booked" hidden tabindex="-1" role="status">
+        <div class="booked-ico" aria-hidden="true">✓</div>
+        <p id="bookedMsg" class="booked-msg"></p>
+        <p class="note" data-i18n="ok.sub"></p>
+        <div class="booked-actions">
+          <a id="bookedResend" class="btn btn-wa" target="_blank" rel="noopener">
+            <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+            <span data-i18n="ok.resend">Open WhatsApp again</span>
+          </a>
+          <button id="bookedNew" type="button" class="btn btn-ghost" data-i18n="ok.new">Book another</button>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section">
+  <section id="contact" class="section alt">
     <div class="wrap two">
       <div>
         <p class="kicker" data-i18n="ct.kicker">Contact</p>
@@ -216,7 +273,7 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap">© <span id="year"></span> <span data-i18n="hero.title">Dr. Ali Abd Shabana</span>, Lanjar. <span data-i18n="foot">All rights reserved.</span></div>
+  <div class="wrap">© <span id="year"></span> <span data-i18n="hero.title">Dr. Ali and Shabana Health Services Co.</span>, Karachi, Pakistan. <span data-i18n="foot">All rights reserved.</span></div>
 </footer>
 
 <a href="#" class="wa-float" data-wa-quick target="_blank" rel="noopener" aria-label="WhatsApp">
